@@ -1,0 +1,328 @@
+{
+"nodes":[
+{"label":["CERTIFICATE","Certificate"],"name":"Certificate","attributes":{"description":"X.509TLS/PKI证书根节点"}},
+
+{"label":["CERTIFICATE","Certificate"],"name":"tbsCertificate","attributes":{"path_address":"Certificate.tbsCertificate","description":"证书主体信息，包括版本、序列号、签名、主体、有效期等"}},
+{"label":["CERTIFICATE","Certificate"],"name":"signatureAlgorithm","attributes":{"path_address":"Certificate.signatureAlgorithm","description":"证书签名算法标识","presence":"REQUIRED"}},
+{"label":["CERTIFICATE","Certificate"],"name":"signatureValue","attributes":{"path_address":"Certificate.signatureValue","asn1_type":"BITSTRING","description":"证书签名值","presence":"REQUIRED"}},
+
+{"label":["CERTIFICATE","tbsCertificate"],"name":"version","attributes":{"path_address":"Certificate.tbsCertificate.version","asn1_type":"INTEGER","presence":"OPTIONAL","default":0}},
+{"label":["CERTIFICATE","tbsCertificate"],"name":"serialNumber","attributes":{"path_address":"Certificate.tbsCertificate.serialNumber","asn1_type":"INTEGER","presence":"REQUIRED"}},
+{"label":["CERTIFICATE","tbsCertificate"],"name":"signature","attributes":{"path_address":"Certificate.tbsCertificate.signature","presence":"REQUIRED"}},
+{"label":["CERTIFICATE","tbsCertificate"],"name":"issuer","attributes":{"path_address":"Certificate.tbsCertificate.issuer","presence":"REQUIRED","description":"颁发者信息"}},
+{"label":["CERTIFICATE","tbsCertificate"],"name":"validity","attributes":{"path_address":"Certificate.tbsCertificate.validity","presence":"REQUIRED"}},
+{"label":["CERTIFICATE","tbsCertificate"],"name":"subject","attributes":{"path_address":"Certificate.tbsCertificate.subject","presence":"REQUIRED","description":"证书主体信息"}},
+{"label":["CERTIFICATE","tbsCertificate"],"name":"subjectPublicKeyInfo","attributes":{"path_address":"Certificate.tbsCertificate.subjectPublicKeyInfo","description":"主体公钥信息"}},
+{"label":["CERTIFICATE","tbsCertificate"],"name":"UniqueIdentifiers","attributes":{"path_address":"Certificate.tbsCertificateUnique_Identifiers","asn1_type":"BITSTRING","presence":"OPTIONAL"}},
+{"label":["CERTIFICATE","tbsCertificate"],"name":"extensions","attributes":{"path_address":"Certificate.tbsCertificate.extensions","description":"证书扩展列表","presence":"OPTIONAL"}},
+
+{"label":["CERTIFICATE","distinguished_name"],"name":"Name","attributes":{"path_address":"Certificate.tbsCertificate.issuer.Name","description":"X.501类型的结构"}},
+{"label":["CERTIFICATE","distinguished_name"],"name":"RelativeDistinguishedName","attributes":{"path_address":"Certificate.tbsCertificate.issuer.Name.RelativeDistinguishedName","description":"与DN相关的值"}},
+{"label":["CERTIFICATE","distinguished_name"],"name":"AttributeTypeAndValue","attributes":{"path_address":"Certificate.tbsCertificate.issuer.Name.RelativeDistinguishedName.AttributeTypeAndValue","description":"DN值的集合结构"}},
+{"label":["CERTIFICATE","distinguished_name"],"name":"AttributeType","attributes":{"path_address":"Certificate.tbsCertificate.issuer.Name.RelativeDistinguishedName.AttributeTypeAndValue.AttributeType","description":"DN具体值的类型"}},
+{"label":["CERTIFICATE","distinguished_name"],"name":"AttributeValue","attributes":{"path_address":"Certificate.tbsCertificate.issuer.Name.RelativeDistinguishedName.AttributeTypeAndValue.AttributeValue","description":"DN值的具体值"}},
+{"label":["CERTIFICATE","distinguished_name"],"name":"DirectoryString","attributes":{"path_address":"Certificate.tbsCertificate.issuer.Name.RelativeDistinguishedName.AttributeTypeAndValue.AttributeType.DirectoryString","description":"DN类型"}},
+{"label":["CERTIFICATE","DirectoryString_Value"],"name":"teletexString","attributes":{"path_address":"Certificate.tbsCertificate.issuer.Name.RelativeDistinguishedName.AttributeTypeAndValue.AttributeType.DirectoryString.teletexString","description":"DN具体类型"}},
+{"label":["CERTIFICATE","DirectoryString_Value"],"name":"printableString","attributes":{"path_address":"Certificate.tbsCertificate.issuer.Name.RelativeDistinguishedName.AttributeTypeAndValue.AttributeType.DirectoryString.printableString","description":"DN具体类型"}},
+{"label":["CERTIFICATE","DirectoryString_Value"],"name":"universalString","attributes":{"path_address":"Certificate.tbsCertificate.issuer.Name.RelativeDistinguishedName.AttributeTypeAndValue.AttributeType.DirectoryString.universalString","description":"DN具体类型"}},
+{"label":["CERTIFICATE","DirectoryString_Value"],"name":"utf8String","attributes":{"path_address":"Certificate.tbsCertificate.issuer.Name.RelativeDistinguishedName.AttributeTypeAndValue.AttributeType.DirectoryString.utf8String","description":"DN具体类型"}},
+{"label":["CERTIFICATE","DirectoryString_Value"],"name":"bmpString","attributes":{"path_address":"Certificate.tbsCertificate.issuer.Name.RelativeDistinguishedName.AttributeTypeAndValue.AttributeType.DirectoryString.bmpString","description":"DN具体类型"}},
+
+{"label":["CERTIFICATE","validity"],"name":"notBefore","attributes":{"path_address":"Certificate.tbsCertificate.validity.notBefore","presence":"REQUIRED"}},
+{"label":["CERTIFICATE","validity"],"name":"notAfter","attributes":{"path_address":"Certificate.tbsCertificate.validity.notAfter","presence":"REQUIRED"}},
+{"label":["CERTIFICATE","validity"],"name":"UTCTime","attributes":{"path_address":"Certificate.tbsCertificate.validity.UTCTime","presence":"REQUIRED"}},
+{"label":["CERTIFICATE","validity"],"name":"GeneralizedTime","attributes":{"path_address":"Certificate.tbsCertificate.validity.GeneralizedTime","presence":"REQUIRED"}},
+
+{"label":["CERTIFICATE","UniqueIdentifiers"],"name":"issuerUniqueID","attributes":{"path_address":"Certificate.tbsCertificate.issuerUniqueID","asn1_type":"BITSTRING","presence":"OPTIONAL"}},
+{"label":["CERTIFICATE","UniqueIdentifiers"],"name":"subjectUniqueID","attributes":{"path_address":"Certificate.tbsCertificate.subjectUniqueID","asn1_type":"BITSTRING","presence":"OPTIONAL"}},
+
+{"label":["CERTIFICATE","extensions"],"name":"extension","attributes":{"path_address":"Certificate.tbsCertificate.extensions.extension","description":"证书扩展结构"}},
+{"label":["CERTIFICATE","extension"],"name":"extnID","attributes":{"path_address":"Certificate.tbsCertificate.extensions.extension.extnID","description":"扩展的OID"}},
+{"label":["CERTIFICATE","extension"],"name":"extnValue","attributes":{"path_address":"Certificate.tbsCertificate.extensions.extension.extnValue","description":"对应ASN.1结构的DER编码结果，以OCTETSTRING形式存储"}},
+{"label":["CERTIFICATE","extension"],"name":"critical","attributes":{"path_address":"Certificate.tbsCertificate.extensions.extension.critical","description":"默认FALSE"}},
+
+{"label":["CERTIFICATE","extensions"],"name":"StandardExtensions","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions","description":"标准拓展"}},
+
+{"label":["CERTIFICATE","StandardExtensions"],"name":"AuthorityKeyIdentifier","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.AuthorityKeyIdentifier","description":"明确标识“用于签发本证书的那一把CA私钥所对应的公钥”"}},
+{"label":["CERTIFICATE","AuthorityKeyIdentifier"],"name":"keyIdentifier","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.AuthorityKeyIdentifier.keyIdentifier","description":"用于与CA证书的SKI直接匹配”"}},
+{"label":["CERTIFICATE","AuthorityKeyIdentifier"],"name":"authorityCertIssuer","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.AuthorityKeyIdentifier","description":"明明确给出CA证书的issuer名称”"}},
+{"label":["CERTIFICATE","AuthorityKeyIdentifier"],"name":"authorityCertSerialNumber","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.AuthorityKeyIdentifier","description":"明确给出CA证书的序列号"}},
+
+{"label":["CERTIFICATE","StandardExtensions"],"name":"SubjectKeyIdentifier","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.SubjectKeyIdentifier","description":"标识“这张证书里包含的是哪一把公钥”"}},
+
+{"label":["CERTIFICATE","StandardExtensions"],"name":"KeyUsage","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.KeyUsage","description":"标对证书中包含的公钥，施加“用途级别”的强约束"}},
+{"label":["CERTIFICATE","KeyUsage"],"name":"digitalSignature","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.KeyUsage.digitalSignature","description":""}},
+{"label":["CERTIFICATE","KeyUsage"],"name":"nonRepudiation","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.KeyUsage.nonRepudiation","description":""}},
+{"label":["CERTIFICATE","KeyUsage"],"name":"keyEncipherment","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.KeyUsage.keyEncipherment","description":""}},
+{"label":["CERTIFICATE","KeyUsage"],"name":"dataEncipherment","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.KeyUsage.dataEncipherment","description":""}},
+{"label":["CERTIFICATE","KeyUsage"],"name":"keyAgreement","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.KeyUsage.keyAgreement","description":""}},
+{"label":["CERTIFICATE","KeyUsage"],"name":"keyCertSign","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.KeyUsage.keyCertSign","description":""}},
+{"label":["CERTIFICATE","KeyUsage"],"name":"cRLSign","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.KeyUsage.cRLSign","description":""}},
+{"label":["CERTIFICATE","KeyUsage"],"name":"encipherOnly","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.KeyUsage.encipherOnly","description":""}},
+{"label":["CERTIFICATE","KeyUsage"],"name":"decipherOnly","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.KeyUsage.decipherOnly","description":""}},
+
+{"label":["CERTIFICATE","StandardExtensions"],"name":"CertificatePolicies","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.CertificatePolicies","description":"指示证书颁发所依据的策略以及证书的用途"}},
+{"label":["CERTIFICATE","CertificatePolicies"],"name":"PolicyInformation","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.CertificatePolicies.PolicyInformation","description":"证书策略扩展由一个或多个策略条目（PolicyInformation）组成"}},
+{"label":["CERTIFICATE","CertificatePolicies"],"name":"policyIdentifier","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.CertificatePolicies.PolicyInformation.policyIdentifier","description":"证书策略扩展由一个或多个策略条目（PolicyInformation）组成"}},
+{"label":["CERTIFICATE","CertificatePolicies"],"name":"policyQualifiers","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.CertificatePolicies.PolicyInformation.policyQualifiers","description":"证书策略扩展由一个或多个策略条目（PolicyInformation）组成"}},
+{"label":["CERTIFICATE","policyQualifiers"],"name":"CPSPointer","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.CertificatePolicies.PolicyInformation.policyQualifiers.CPSPointer","description":"包含指向CA发布的证书实践声明(CPS)的指针"}},
+{"label":["CERTIFICATE","policyQualifiers"],"name":"UserNoticequalifiers","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.CertificatePolicies.PolicyInformation.policyQualifiers.UserNoticequalifiers","description":"旨在证书使用时向依赖方显示。只有路径验证返回的用户通知才会显示给用户"}},
+{"label":["CERTIFICATE","UserNoticequalifiers"],"name":"noticeRef","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.CertificatePolicies.PolicyInformation.policyQualifiers.UserNoticequalifier.noticeRefs","description":""}},
+{"label":["CERTIFICATE","UserNoticequalifiers"],"name":"organization","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.CertificatePolicies.PolicyInformation.policyQualifiers.UserNoticequalifier.noticeRefs.organization","description":""}},
+{"label":["CERTIFICATE","UserNoticequalifiers"],"name":"noticeNumbers","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.CertificatePolicies.PolicyInformation.policyQualifiers.UserNoticequalifier.noticeRefs.noticeNumbers","description":""}},
+{"label":["CERTIFICATE","UserNoticequalifiers"],"name":"explicitText","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.CertificatePolicies.PolicyInformation.policyQualifiers.UserNoticequalifiers.explicitText","description":""}},
+{"label":["CERTIFICATE","CertificatePolicies"],"name":"anyPolicy","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.CertificatePolicies.anyPolicy","description":"特殊策略"}},
+
+{"label":["CERTIFICATE","DisplayText"],"name":"DisplayText","attributes":{"path_address":"DisplayText","description":"显式文本"}},
+{"label":["CERTIFICATE","DisplayText"],"name":"ia5String","attributes":{"path_address":"DisplayText.ia5String","description":""}},
+{"label":["CERTIFICATE","DisplayText"],"name":"visibleString","attributes":{"path_address":"DisplayText.ia5String","description":""}},
+
+{"label":["CERTIFICATE","StandardExtensions"],"name":"PolicyMappings","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.PolicyMappings","description":"指示证书颁发所依据的策略以及证书的用途"}},
+{"label":["CERTIFICATE","PolicyMappings"],"name":"issuerDomainPolicy","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.PolicyMappings","description":""}},
+{"label":["CERTIFICATE","PolicyMappings"],"name":"subjectDomainPolicy","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.PolicyMappings","description":""}},
+
+{"label":["CERTIFICATE","StandardExtensions"],"name":"SubjectAlternativeName","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.SubjectAlternativeName","description":"主题备用名称扩展允许将身份绑定到证书的主题"}},
+
+{"label":["CERTIFICATE","GeneralName"],"name":"GeneralNames","attributes":{"path_address":"GeneralName","description":"被强类型标注的身份值”"}},
+{"label":["CERTIFICATE","GeneralName"],"name":"otherName","attributes":{"path_address":"GeneralName.otherName","description":""}},
+{"label":["CERTIFICATE","GeneralName"],"name":"rfc822Name","attributes":{"path_address":"GeneralName.rfc822Name","description":""}},
+{"label":["CERTIFICATE","GeneralName"],"name":"dNSName","attributes":{"path_address":"GeneralName.dNSName","description":""}},
+{"label":["CERTIFICATE","GeneralName"],"name":"x400Address","attributes":{"path_address":"GeneralName.x400Address","description":""}},
+{"label":["CERTIFICATE","GeneralName"],"name":"directoryName","attributes":{"path_address":"GeneralName.directoryName","description":""}},
+{"label":["CERTIFICATE","GeneralName"],"name":"ediPartyName","attributes":{"path_address":"GeneralName.ediPartyName","description":""}},
+{"label":["CERTIFICATE","GeneralName"],"name":"uniformResourceIdentifier","attributes":{"path_address":"GeneralName.uniformResourceIdentifier","description":""}},
+{"label":["CERTIFICATE","GeneralName"],"name":"iPAddress","attributes":{"path_address":"GeneralName.iPAddress","description":""}},
+{"label":["CERTIFICATE","GeneralName"],"name":"registeredID","attributes":{"path_address":"GeneralName.registeredID","description":""}},
+{"label":["CERTIFICATE","otherName"],"name":"type-id","attributes":{"path_address":"GeneralName.otherName.type-id","description":""}},
+{"label":["CERTIFICATE","otherName"],"name":"value","attributes":{"path_address":"GeneralName.otherName.value","description":""}},
+{"label":["CERTIFICATE","ediPartyName"],"name":"nameAssigner","attributes":{"path_address":"GeneralName.ediPartyName.nameAssigner","description":""}},
+{"label":["CERTIFICATE","ediPartyName"],"name":"partyName","attributes":{"path_address":"GeneralName.ediPartyName.partyName","description":""}},
+
+{"label":["CERTIFICATE","StandardExtensions"],"name":"IssuerAlternativeName","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.IssuerAlternativeName","description":"身份与证书颁发机构关联起来"}},
+
+{"label":["CERTIFICATE","StandardExtensions"],"name":"SubjectDirectoryAttributes","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.SubjectDirectoryAttributes","description":"主题目录属性扩展用于传达主题的标识属性（例如，国籍）。"}},
+
+{"label":["CERTIFICATE","StandardExtensions"],"name":"BasicConstraints","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.BasicConstraints","description":"用于标识证书的主体是否是证书颁发机构（CA），以及在包含该证书的有效认证路径中，允许的最大证书层级深度。"}},
+{"label":["CERTIFICATE","BasicConstraints"],"name":"cA","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.BasicConstraints.cA","description":"。"}},
+{"label":["CERTIFICATE","BasicConstraints"],"name":"pathLenConstraint","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.BasicConstraints.pathLenConstraint","description":""}},
+
+{"label":["CERTIFICATE","StandardExtensions"],"name":"NameConstraints","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.NameConstraints","description":"只能用于CA证书，用于限定在证书路径中后续证书的主体名称必须落在指定的命名空间之内。"}},
+{"label":["CERTIFICATE","NameConstraints"],"name":"permittedSubtrees","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.NameConstraints.permittedSubtrees","description":""}},
+{"label":["CERTIFICATE","NameConstraints"],"name":"excludedSubtrees","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.NameConstraints.excludedSubtrees","description":""}},
+
+{"label":["CERTIFICATE","GeneralSubtree"],"name":"GeneralSubtrees","attributes":{"path_address":"GeneralSubtrees","description":""}},
+{"label":["CERTIFICATE","GeneralSubtree"],"name":"base","attributes":{"path_address":"GeneralSubtrees.base","description":""}},
+{"label":["CERTIFICATE","GeneralSubtree"],"name":"minimum","attributes":{"path_address":"GeneralSubtrees.minimum","description":""}},
+{"label":["CERTIFICATE","GeneralSubtree"],"name":"maximum","attributes":{"path_address":"GeneralSubtrees.maximum","description":""}},
+
+{"label":["CERTIFICATE","StandardExtensions"],"name":"PolicyConstraints","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.PolicyConstraints","description":"策略约束扩展可用于颁发给证书颁发机构(CA)的证书。"}},
+{"label":["CERTIFICATE","PolicyConstraints"],"name":"requireExplicitPolicy","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.PolicyConstraints.requireExplicitPolicy","description":"限制或禁止策略映射"}},
+{"label":["CERTIFICATE","PolicyConstraints"],"name":"inhibitPolicyMapping","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.PolicyConstraints.inhibitPolicyMapping","description":"要求证书路径中的每一张证书都必须包含可接受的策略标识符。"}},
+
+{"label":["CERTIFICATE","StandardExtensions"],"name":"ExtendedKeyUsage","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.ExtendedKeyUsage","description":"指明证书中公钥可被使用的一个或多个具体用途，这些用途是对keyusage扩展中“基本用途”的补充或细化。在通常情况下，该扩展主要出现在终端实体证书中。"}},
+{"label":["CERTIFICATE","ExtendedKeyUsage"],"name":"KeyPurposeId","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.ExtendedKeyUsage.KeyPurposeId","description":"每一种“密钥用途”本质上就是一个OID"}},
+{"label":["CERTIFICATE","ExtendedKeyUsage"],"name":"anyExtendedKeyUsage","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.ExtendedKeyUsage.anyExtendedKeyUsage","description":"在EKU这个扩展存在的前提下，不对扩展密钥用途做进一步语义限制"}},
+
+{"label":["CERTIFICATE","StandardExtensions"],"name":"CRLDistributionPoints","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.CRLDistributionPoints","description":"告诉证书使用者：应当去哪里、以什么方式获取“与该证书相关的吊销列表（CRL）"}},
+{"label":["CERTIFICATE","CRLDistributionPoints"],"name":"DistributionPoint","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.CRLDistributionPoints.DistributionPoint","description":"DistributionPoint的序列拥有三个字段"}},
+{"label":["CERTIFICATE","CRLDistributionPoints"],"name":"distributionPoint","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.CRLDistributionPoints.DistributionPoint.distributionPoint","description":"CRL在哪里"}},
+{"label":["CERTIFICATE","CRLDistributionPoints"],"name":"fullName","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.CRLDistributionPoints.DistributionPoint.distributionPoint.fullName","description":""}},
+{"label":["CERTIFICATE","CRLDistributionPoints"],"name":"nameRelativeToCRLIssuer","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.CRLDistributionPoints.DistributionPoint.distributionPoint.nameRelativeToCRLIssuer","description":""}},
+{"label":["CERTIFICATE","CRLDistributionPoints"],"name":"reasons","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.CRLDistributionPoints.DistributionPoint.reasons","description":""}},
+{"label":["CERTIFICATE","CRLDistributionPoints"],"name":"unused","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.CRLDistributionPoints.DistributionPoint.reasons.unused","description":""}},
+{"label":["CERTIFICATE","CRLDistributionPoints"],"name":"keyCompromise","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.CRLDistributionPoints.DistributionPoint.reasons.keyCompromise","description":""}},
+{"label":["CERTIFICATE","CRLDistributionPoints"],"name":"cACompromise","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.CRLDistributionPoints.DistributionPoint.reasons.cACompromise","description":""}},
+{"label":["CERTIFICATE","CRLDistributionPoints"],"name":"affiliationChanged","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.CRLDistributionPoints.DistributionPoint.reasons.affiliationChanged","description":""}},
+{"label":["CERTIFICATE","CRLDistributionPoints"],"name":"superseded","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.CRLDistributionPoints.DistributionPoint.reasons.superseded","description":""}},
+{"label":["CERTIFICATE","CRLDistributionPoints"],"name":"cessationOfOperation","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.CRLDistributionPoints.DistributionPoint.reasons.cessationOfOperation","description":""}},
+{"label":["CERTIFICATE","CRLDistributionPoints"],"name":"certificateHold","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.CRLDistributionPoints.DistributionPoint.reasons.certificateHold","description":""}},
+{"label":["CERTIFICATE","CRLDistributionPoints"],"name":"privilegeWithdrawn","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.CRLDistributionPoints.DistributionPoint.reasons.privilegeWithdrawn","description":""}},
+{"label":["CERTIFICATE","CRLDistributionPoints"],"name":"aACompromise","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.CRLDistributionPoints.DistributionPoint.reasons.aACompromise","description":""}},
+{"label":["CERTIFICATE","CRLDistributionPoints"],"name":"cRLIssuer","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.CRLDistributionPoints.DistributionPoint.nameRelativeToCRLIssuer","description":"相对DN"}},
+
+{"label":["CERTIFICATE","StandardExtensions"],"name":"InhibitanyPolicy","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.InhibitanyPolicy","description":"用于CA证书中，其核心作用是限制特殊证书策略anyPolicy（OID为2.5.29.32.0）在证书路径验证过程中的使用范围。"}},
+{"label":["CERTIFICATE","InhibitanyPolicy"],"name":"SkipCerts","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.InhibitanyPolicy.SkipCerts","description":"在证书路径中，还允许出现多少个“非自签发（non-self-issued）证书”，在这些证书中anyPolicy仍然可以被处理和使用。"}},
+
+{"label":["CERTIFICATE","StandardExtensions"],"name":"FreshestCRL","attributes":{"path_address":"Certificate.tbsCertificate.extensions.StandardExtensions.FreshestCRL","description":"用于指示如何获取“最新的撤销信息”，具体来说，是用于获取增量"}},
+
+{"label":["CERTIFICATE","extensions"],"name":"PrivateInternetExtensions","attributes":{"path_address":"Certificate.tbsCertificate.extensions.PrivateInternetExtensions","description":"私有拓展"}},
+
+{   "label":["CERTIFICATE","PrivateInternetExtensions"],   "name":"AuthorityInformationAccess"    ,  "attributes":{"path_address":"Certificate.tbsCertificate.extensions.PrivateInternetExtensions.AuthorityInformationAccess","description":"AIA拓展,用于告诉证书使用方：如何获取与“该证书颁发者（Issuer）”相关的在线信息或服务。"}},
+{   "label":["CERTIFICATE","AuthorityInformationAccess"],  "name":"accessMethod"  ,  "attributes":{"path_address":"Certificate.tbsCertificate.extensions.PrivateInternetExtensions.AuthorityInformationAccess.PrivateInternetExtensions","description":"你要找的是什么服务/信息类型"}},
+{   "label":["CERTIFICATE","AuthorityInformationAccess"],  "name":"accessLocation"    ,  "attributes":{"path_address":"Certificate.tbsCertificate.extensions.PrivateInternetExtensions.AuthorityInformationAccess.accessLocation","description":"你可以从哪里、用什么形式拿到它"}},
+
+{   "label":["CERTIFICATE","PrivateInternetExtensions"],   "name":"SubjectInformationAccess"  ,  "attributes":{"path_address":"Certificate.tbsCertificate.extensions.PrivateInternetExtensions.SubjectInformationAccess","description":"如何访问“证书主体（Subject）自己”所提供的信息或服务。"}},
+
+{   "label":["CERTIFICATE","signatureAlgorithm"],  "name":"AlgorithmIdentifier"   ,  "attributes":{"path_address":"Certificate.tbsCertificate.signature","description":"签名算法标识符"}},
+{   "label":["CERTIFICATE","Field"],   "name":"algorithmOID"  ,  "attributes":{"path_address":"Certificate.tbsCertificate.signature.algorithmOID","asn1_type":"OID"}},
+{   "label":["CERTIFICATE","Field"],   "name":"parameters"    ,  "attributes":{"path_address":"Certificate.tbsCertificate.signature.parameters"}}
+
+],
+
+  "relationships":[
+    { "start": "Certificate", "end": "tbsCertificate", "type": "HAS_FIELD" },
+    { "start": "Certificate", "end": "signatureAlgorithm", "type": "HAS_FIELD" },
+    { "start": "Certificate", "end": "signatureValue", "type": "HAS_FIELD" },
+
+    { "start": "tbsCertificate", "end": "version", "type": "HAS_FIELD" },
+    { "start": "tbsCertificate", "end": "serialNumber", "type": "HAS_FIELD" },
+    { "start": "tbsCertificate", "end": "signature", "type": "HAS_FIELD" },
+    { "start": "tbsCertificate", "end": "issuer", "type": "HAS_FIELD" },
+    { "start": "tbsCertificate", "end": "validity", "type": "HAS_FIELD" },
+    { "start": "tbsCertificate", "end": "subject", "type": "HAS_FIELD" },
+    { "start": "tbsCertificate", "end": "subjectPublicKeyInfo", "type": "HAS_FIELD" },
+    { "start": "tbsCertificate", "end": "UniqueIdentifiers", "type": "HAS_ABS_FIELD" },
+    { "start": "tbsCertificate", "end": "extensions", "type": "HAS_FIELD" },
+
+    { "start": "signature", "end": "AlgorithmIdentifier", "type": "HAS_FIELD" },
+    { "start": "signatureAlgorithm", "end": "AlgorithmIdentifier", "type": "HAS_FIELD" },
+    { "start": "AlgorithmIdentifier", "end": "algorithmOID", "type": "HAS_FIELD" },
+    { "start": "AlgorithmIdentifier", "end": "parameters", "type": "HAS_FIELD" },
+
+    { "start": "issuer", "end": "Name", "type": "HAS_ABS_FIELD" },
+    { "start": "Name", "end": "RelativeDistinguishedName", "type": "HAS_TYPE" },
+    { "start": "Name", "end": "AttributeTypeAndValue", "type": "HAS_ABS_FIELD" },
+    { "start": "AttributeTypeAndValue", "end": "AttributeType", "type": "HAS_FIELD" },
+    { "start": "AttributeTypeAndValue", "end": "AttributeValue", "type": "HAS_FIELD" },
+    { "start": "AttributeTypeAndValue", "end": "DirectoryString", "type": "HAS_TYPE" },
+    { "start": "DirectoryString", "end": "teletexString", "type": "HAS_VALUE" },
+    { "start": "DirectoryString", "end": "printableString", "type": "HAS_VALUE" },
+    { "start": "DirectoryString", "end": "universalString", "type": "HAS_VALUE" },
+    { "start": "DirectoryString", "end": "utf8String", "type": "HAS_VALUE" },
+    { "start": "DirectoryString", "end": "bmpString", "type": "HAS_VALUE" },
+
+    { "start": "validity", "end": "notBefore", "type": "HAS_FIELD" },
+    { "start": "validity", "end": "notAfter", "type": "HAS_FIELD" },
+    { "start": "validity", "end": "UTCTime", "type": "HAS_TYPE" },
+    { "start": "validity", "end": "GeneralizedTime", "type": "HAS_TYPE" },
+
+    { "start": "subject", "end": "Name", "type": "HAS_FIELD" },
+
+    { "start": "UniqueIdentifiers", "end": "issuerUniqueID", "type": "HAS_FIELD" },
+    { "start": "UniqueIdentifiers", "end": "subjectUniqueID", "type": "HAS_FIELD" },
+
+    { "start": "extensions", "end": "extension", "type": "HAS_TYPE" },
+    { "start": "extension", "end": "extnID", "type": "HAS_VALUE" },
+    { "start": "extension", "end": "extnValue", "type": "HAS_VALUE" },
+    { "start": "extension", "end": "critical", "type": "HAS_VALUE" },
+
+    { "start": "extensions", "end": "StandardExtensions", "type": "HAS_TYPE" },
+    { "start": "StandardExtensions", "end": "AuthorityKeyIdentifier", "type": "HAS_FIELD" },
+    { "start": "AuthorityKeyIdentifier", "end": "keyIdentifier", "type": "HAS_VALUE" },
+    { "start": "AuthorityKeyIdentifier", "end": "authorityCertIssuer", "type": "HAS_VALUE" },
+    { "start": "AuthorityKeyIdentifier", "end": "authorityCertSerialNumber", "type": "HAS_VALUE" },
+    { "start": "StandardExtensions", "end": "SubjectKeyIdentifier", "type": "HAS_FIELD" },
+
+    { "start": "StandardExtensions", "end": "KeyUsage", "type": "HAS_FIELD" },
+    { "start": "KeyUsage", "end": "digitalSignature", "type": "HAS_VALUE" },
+    { "start": "KeyUsage", "end": "nonRepudiation", "type": "HAS_VALUE" },
+    { "start": "KeyUsage", "end": "keyEncipherment", "type": "HAS_VALUE" },
+    { "start": "KeyUsage", "end": "dataEncipherment", "type": "HAS_VALUE" },
+    { "start": "KeyUsage", "end": "keyAgreement", "type": "HAS_VALUE" },
+    { "start": "KeyUsage", "end": "keyCertSign", "type": "HAS_VALUE" },
+    { "start": "KeyUsage", "end": "cRLSign", "type": "HAS_VALUE" },
+    { "start": "KeyUsage", "end": "encipherOnly", "type": "HAS_VALUE" },
+    { "start": "KeyUsage", "end": "decipherOnly", "type": "HAS_VALUE" },
+
+    { "start": "StandardExtensions", "end": "CertificatePolicies", "type": "HAS_FIELD" },
+    { "start": "CertificatePolicies", "end": "PolicyInformation", "type": "HAS_ABS_FIELD" },
+    { "start": "PolicyInformation", "end": "policyIdentifier", "type": "HAS_FIELD" },
+    { "start": "PolicyInformation", "end": "policyQualifiers", "type": "HAS_FIELD" },
+    { "start": "policyQualifiers", "end": "CPSPointer", "type": "HAS_FIELD" },
+    { "start": "policyQualifiers", "end": "UserNoticequalifiers", "type": "HAS_FIELD" },
+    { "start": "UserNoticequalifiers", "end": "noticeRef", "type": "HAS_FIELD" },
+    { "start": "UserNoticequalifiers", "end": "explicitText", "type": "HAS_FIELD" },
+    { "start": "noticeRef", "end": "organization", "type": "HAS_FIELD" },
+    { "start": "noticeRef", "end": "noticeNumbers", "type": "HAS_FIELD" },
+    { "start": "CertificatePolicies", "end": "anyPolicy", "type": "HAS_FIELD" },
+    { "start": "explicitText", "end": "DisplayText", "type": "HAS_VALUE" },
+    { "start": "DisplayText", "end": "ia5String", "type": "HAS_VALUE" },
+    { "start": "DisplayText", "end": "visibleString", "type": "HAS_VALUE" },
+    { "start": "DisplayText", "end": "bmpString", "type": "HAS_VALUE" },
+    { "start": "DisplayText", "end": "utf8String", "type": "HAS_VALUE" },
+
+    { "start": "StandardExtensions", "end": "PolicyMappings", "type": "HAS_FIELD" },
+    { "start": "PolicyMappings", "end": "issuerDomainPolicy", "type": "HAS_FIELD" },
+    { "start": "PolicyMappings", "end": "subjectDomainPolicy", "type": "HAS_FIELD" },
+
+    { "start": "StandardExtensions", "end": "SubjectAlternativeName", "type": "HAS_FIELD" },
+    { "start": "SubjectAlternativeName", "end": "GeneralNames", "type": "HAS_TYPE" },
+
+    { "start": "GeneralNames", "end": "otherName", "type": "HAS_TYPE" },
+    { "start": "GeneralNames", "end": "rfc822Name", "type": "HAS_TYPE" },
+    { "start": "GeneralNames", "end": "dNSName", "type": "HAS_TYPE" },
+    { "start": "GeneralNames", "end": "x400Address", "type": "HAS_TYPE" },
+    { "start": "GeneralNames", "end": "directoryName", "type": "HAS_TYPE" },
+    { "start": "GeneralNames", "end": "ediPartyName", "type": "HAS_TYPE" },
+    { "start": "GeneralNames", "end": "uniformResourceIdentifier", "type": "HAS_TYPE" },
+    { "start": "GeneralNames", "end": "iPAddress", "type": "HAS_TYPE" },
+    { "start": "GeneralNames", "end": "registeredID", "type": "HAS_TYPE" },
+    { "start": "otherName", "end": "type-id", "type": "HAS_VALUE" },
+    { "start": "otherName", "end": "value", "type": "HAS_VALUE" },
+    { "start": "ediPartyName", "end": "nameAssigner", "type": "HAS_VALUE" },
+    { "start": "ediPartyName", "end": "partyName", "type": "HAS_VALUE" },
+
+    { "start": "StandardExtensions", "end": "IssuerAlternativeName", "type": "HAS_FIELD" },
+    { "start": "IssuerAlternativeName", "end": "GeneralNames", "type": "HAS_TYPE" },
+
+    { "start": "StandardExtensions", "end": "SubjectDirectoryAttributes", "type": "HAS_FIELD" },
+
+    { "start": "StandardExtensions", "end": "BasicConstraints", "type": "HAS_FIELD" },
+    { "start": "BasicConstraints", "end": "cA", "type": "HAS_FIELD" },
+    { "start": "BasicConstraints", "end": "pathLenConstraint", "type": "HAS_FIELD" },
+
+    { "start": "StandardExtensions", "end": "NameConstraints", "type": "HAS_FIELD" },
+    { "start": "NameConstraints", "end": "permittedSubtrees", "type": "HAS_FIELD" },
+    { "start": "NameConstraints", "end": "excludedSubtrees", "type": "HAS_FIELD" },
+
+    { "start": "permittedSubtrees", "end": "GeneralSubtrees", "type": "HAS_FIELD" },
+    { "start": "excludedSubtrees", "end": "GeneralSubtrees", "type": "HAS_FIELD" },
+
+    { "start": "GeneralSubtrees", "end": "base", "type": "HAS_FIELD" },
+    { "start": "GeneralSubtrees", "end": "minimum", "type": "HAS_FIELD" },
+    { "start": "GeneralSubtrees", "end": "maximum", "type": "HAS_FIELD" },
+
+    { "start": "StandardExtensions", "end": "PolicyConstraints", "type": "HAS_FIELD" },
+    { "start": "PolicyConstraints", "end": "requireExplicitPolicy", "type": "HAS_FIELD" },
+    { "start": "PolicyConstraints", "end": "inhibitPolicyMapping", "type": "HAS_FIELD" },
+
+    { "start": "StandardExtensions", "end": "ExtendedKeyUsage", "type": "HAS_FIELD" },
+    { "start": "ExtendedKeyUsage", "end": "KeyPurposeId", "type": "HAS_FIELD" },
+    { "start": "ExtendedKeyUsage", "end": "anyExtendedKeyUsage", "type": "HAS_FIELD" },
+
+    { "start": "StandardExtensions", "end": "CRLDistributionPoints", "type": "HAS_FIELD" },
+    { "start": "CRLDistributionPoints", "end": "DistributionPoint", "type": "HAS_FIELD" },
+    { "start": "DistributionPoint", "end": "distributionPoint", "type": "HAS_FIELD" },
+    { "start": "distributionPoint", "end": "fullName", "type": "HAS_FIELD" },
+    { "start": "distributionPoint", "end": "nameRelativeToCRLIssuer", "type": "HAS_FIELD" },
+    { "start": "DistributionPoint", "end": "reasons", "type": "HAS_FIELD" },
+    { "start": "reasons", "end": "unused", "type": "HAS_FIELD" },
+    { "start": "reasons", "end": "keyCompromise", "type": "HAS_FIELD" },
+    { "start": "reasons", "end": "cACompromise", "type": "HAS_FIELD" },
+    { "start": "reasons", "end": "affiliationChanged", "type": "HAS_FIELD" },
+    { "start": "reasons", "end": "superseded", "type": "HAS_FIELD" },
+    { "start": "reasons", "end": "cessationOfOperation", "type": "HAS_FIELD" },
+    { "start": "reasons", "end": "certificateHold", "type": "HAS_FIELD" },
+    { "start": "reasons", "end": "privilegeWithdrawn", "type": "HAS_FIELD" },
+    { "start": "reasons", "end": "aACompromise", "type": "HAS_FIELD" },
+    { "start": "DistributionPoint", "end": "cRLIssuer", "type": "HAS_FIELD" },
+
+    { "start": "StandardExtensions", "end": "InhibitanyPolicy", "type": "HAS_FIELD" },
+    { "start": "InhibitanyPolicy", "end": "SkipCerts", "type": "HAS_FIELD" },
+
+    { "start": "StandardExtensions", "end": "FreshestCRL", "type": "HAS_FIELD" },
+    { "start": "FreshestCRL", "end": "DistributionPoint", "type": "HAS_FIELD" },
+    { "start": "FreshestCRL", "end": "reasons", "type": "HAS_FIELD" },
+    { "start": "FreshestCRL", "end": "cRLIssuer", "type": "HAS_FIELD" },
+
+    { "start": "extensions", "end": "PrivateInternetExtensions", "type": "HAS_FIELD" },
+    { "start": "PrivateInternetExtensions", "end": "AuthorityInformationAccess", "type": "HAS_FIELD" },
+    { "start": "AuthorityInformationAccess", "end": "accessMethod", "type": "HAS_FIELD" },
+    { "start": "AuthorityInformationAccess", "end": "accessLocation", "type": "HAS_FIELD" },
+    { "start": "accessLocation", "end": "GeneralNames", "type": "HAS_TYPE" },
+
+    { "start": "extensions", "end": "SubjectInformationAccess", "type": "HAS_FIELD" },
+    { "start": "SubjectInformationAccess", "end": "accessMethod", "type": "HAS_FIELD" },
+    { "start": "SubjectInformationAccess", "end": "accessLocation", "type": "HAS_FIELD" }
+  ]
+}

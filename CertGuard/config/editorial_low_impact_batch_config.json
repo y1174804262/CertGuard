@@ -1,0 +1,60 @@
+{
+  "_说明": "这是专门用于 CertGuard.CertRetrieve_Analyze_Verify.batch_run 的 editorial_low_impact 批量测试配置。程序只读取每个参数对象中的 value 字段，description 仅用于人工说明。",
+  "parameters": {
+    "document_keys": {
+      "value": [
+        "RFC2527",
+        "RFC3280",
+        "RFC3647",
+        "RFC3709",
+        "RFC4158",
+        "RFC4325",
+        "RFC4518",
+        "RFC5280",
+        "RFC6125",
+        "RFC6818",
+        "RFC6960",
+        "RFC6962",
+        "RFC7773",
+        "CA_Browser_Forum_TLS_BR_2_2_7"
+      ],
+      "description": "参与检测的文档 key 列表。保持和主批跑配置一致，覆盖当前已经导入并完成节点关联的 RFC 与 CA/B Forum TLS BR。"
+    },
+    "datasets": {
+      "value": [],
+      "description": "额外指定的 dataset JSON 路径列表。通常为空；程序会根据 document_keys 自动寻找 data/documents/<DOCUMENT_KEY>/rfc2certificate/<DOCUMENT_KEY>_paragraph_node_linking_dataset.json。"
+    },
+    "batch_index": {
+      "value": 0,
+      "description": "批次编号，从 0 开始。实际节点范围由 batch_index 和 batch_size 决定：start = batch_index * batch_size。"
+    },
+    "batch_size": {
+      "value": 50,
+      "description": "每个批次最多处理多少个结构节点。沿用之前的 50，便于按批观察和断点恢复。"
+    },
+    "mode": {
+      "value": "editorial_low_impact",
+      "description": "本配置只运行 editorial_low_impact，不运行 semantic_impact 和 cross_document。"
+    },
+    "max_context_tokens": {
+      "value": 4000,
+      "description": "每个 LLM 请求的最大上下文 token 数。根据当前测试，editorial_low_impact 使用 4k 更适合发现明显编辑错误，也能降低长上下文导致的漏报和误报。"
+    },
+    "llm_timeout": {
+      "value": 600.0,
+      "description": "单次 LLM 调用超时时间，单位为秒。沿用原批跑配置。"
+    },
+    "workers": {
+      "value": 3,
+      "description": "并发处理的结构节点数量。editorial_low_impact 虽然使用 4k 上下文，但每个节点仍可能包含多个 chunk 和两轮 LLM 调用；当前接口下 3 比 10 更稳，能降低排队、超时和接口拥塞。"
+    },
+    "output_root": {
+      "value": "CertGuard/results/runs",
+      "description": "检测结果输出根目录。程序会在该目录下按 document_keys 生成主结果目录，并在每个节点下写入 editorial_low_impact 子目录。"
+    },
+    "force": {
+      "value": false,
+      "description": "是否强制重跑。false 表示启用断点恢复；如果某个节点的 editorial_low_impact/final.json 已存在则跳过。正式重跑前可只清理 editorial_low_impact 目录，从而不影响 cross_document 和 semantic_impact。"
+    }
+  }
+}

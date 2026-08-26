@@ -1,0 +1,72 @@
+{
+  "_说明": "这是专门用于 CertGuard.CertRetrieve_Analyze_Verify.editorial_document 的文档级 editorial_low_impact 配置。程序只读取每个参数对象中的 value 字段，description 仅用于人工说明。",
+  "parameters": {
+    "document_keys": {
+      "value": [
+        "RFC2527",
+        "RFC3280",
+        "RFC3647",
+        "RFC3709",
+        "RFC4158",
+        "RFC4325",
+        "RFC4518",
+        "RFC5280",
+        "RFC6125",
+        "RFC6818",
+        "RFC6960",
+        "RFC6962",
+        "RFC7773",
+        "CA_Browser_Forum_TLS_BR_2_2_7"
+      ],
+      "description": "需要进行文档级普通编辑错误检测的文档列表。该路线不按证书节点过滤，而是扫描每个文档自身的全部段落。"
+    },
+    "datasets": {
+      "value": [],
+      "description": "额外指定 dataset JSON 路径。通常为空；程序会根据 document_keys 自动读取各文档的 paragraph_node_linking_dataset.json，并只使用其中的原文段落。"
+    },
+    "max_context_tokens": {
+      "value": 4000,
+      "description": "每个 LLM 请求的最大上下文 token 数。当前 editorial_low_impact 只找明显编辑错误，4k 比长上下文更稳。"
+    },
+    "overlap_paragraphs": {
+      "value": 2,
+      "description": "相邻 chunk 之间重叠的段落数，用于避免跨 chunk 边界漏掉局部编辑错误。"
+    },
+    "max_evidence": {
+      "value": null,
+      "description": "最多读取多少个段落。null 表示读取该文档全部段落。"
+    },
+    "chunk_index": {
+      "value": null,
+      "description": "只运行某个 1-based chunk。null 表示运行全部 chunk。调试时可临时填写。"
+    },
+    "max_chunks": {
+      "value": null,
+      "description": "最多运行多少个 chunk。null 表示运行全部 chunk。调试时可临时填写。"
+    },
+    "force": {
+      "value": false,
+      "description": "是否强制重跑。false 表示保留断点恢复和缓存；已有相同上下文与 prompt 的 analysis/evaluate 会复用。"
+    },
+    "dry_run": {
+      "value": false,
+      "description": "是否只构造 chunk 而不调用 LLM。true 用于检查段落数和 chunk 数。"
+    },
+    "output_root": {
+      "value": "CertGuard/results/runs/editorial_document_4k",
+      "description": "文档级 editorial_low_impact 输出目录。每个文档会写入 <output_root>/<DOCUMENT_KEY>/editorial_low_impact/，不影响节点级 semantic_impact 或 cross_document。"
+    },
+    "llm_timeout": {
+      "value": 600.0,
+      "description": "单次 LLM 调用超时时间，单位为秒。"
+    },
+    "llm_temperature": {
+      "value": 0.0,
+      "description": "LLM 温度，保持确定性。"
+    },
+    "llm_backend": {
+      "value": "openai",
+      "description": "LLM 后端。当前默认使用 OpenAI-compatible 接口。"
+    }
+  }
+}

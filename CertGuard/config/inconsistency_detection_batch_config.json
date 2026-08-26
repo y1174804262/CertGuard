@@ -1,0 +1,60 @@
+{
+  "_说明": "这是 CertGuard.CertRetrieve_Analyze_Verify.batch_run 的批量运行配置文件。程序只读取每个参数对象中的 value 字段，description 用于人工说明，可以自由修改。",
+  "parameters": {
+    "document_keys": {
+      "value": [
+        "RFC2527",
+        "RFC3280",
+        "RFC3647",
+        "RFC3709",
+        "RFC4158",
+        "RFC4325",
+        "RFC4518",
+        "RFC5280",
+        "RFC6125",
+        "RFC6818",
+        "RFC6960",
+        "RFC6962",
+        "RFC7773",
+        "CA_Browser_Forum_TLS_BR_2_2_7"
+      ],
+      "description": "参与不一致检测的文档 key 列表。每个 key 对应 data/documents/<DOCUMENT_KEY>/rfc2certificate/<DOCUMENT_KEY>_paragraph_node_linking_dataset.json。若要加入 CAB BR，可在数组中追加 CA_Browser_Forum_TLS_BR_2_2_7。"
+    },
+    "datasets": {
+      "value": [],
+      "description": "额外指定的 dataset JSON 路径列表。通常为空即可；程序会根据 document_keys 自动寻找对应 dataset。只有当某个数据集不在默认目录时才需要填写。"
+    },
+    "batch_index": {
+      "value": 0,
+      "description": "批次编号，从 0 开始。实际检测节点范围由 batch_index 和 batch_size 共同决定：start = batch_index * batch_size。"
+    },
+    "batch_size": {
+      "value": 50,
+      "description": "每个批次最多处理多少个结构节点。当前 RFC-only 实验共有 141 个节点，所以 200 可以一次覆盖全部节点。若节点很多，可以设置为 50 或 100 分批运行。"
+    },
+    "mode": {
+      "value": "all",
+      "description": "检测模式。可选值：all、semantic_impact、editorial_low_impact、cross_document。all 表示一次运行三条检测路线：语义/实现影响类、编辑/低影响类、跨文档差异类。"
+    },
+    "max_context_tokens": {
+      "value": 48000,
+      "description": "每个 LLM 请求中用户上下文的最大 token 数。之前测试后采用 48000，兼顾上下文覆盖和稳定性。模型支持更大上下文时可以提高，但调用会更慢、更贵。"
+    },
+    "llm_timeout": {
+      "value": 600.0,
+      "description": "单次 LLM 调用超时时间，单位为秒。长上下文检测较慢，因此当前设置为 600 秒。"
+    },
+    "workers": {
+      "value": 10,
+      "description": "并发处理的结构节点数量。3 表示同时跑 3 个节点。增大可以加快速度，但会增加 API 并发压力、限流风险和本地资源占用。"
+    },
+    "output_root": {
+      "value": "CertGuard/results/runs",
+      "description": "检测结果输出根目录。每次运行会在该目录下按 document_keys 和 node_id 生成子目录。长文件名会自动截断并保留后半部分字段名。"
+    },
+    "force": {
+      "value": false,
+      "description": "是否强制重跑。false 表示启用断点恢复：如果某个节点三类 final.json 已存在，则跳过；analysis/evaluate 缓存也会尽量复用。true 会重新调用 LLM，通常不建议开启。"
+    }
+  }
+}

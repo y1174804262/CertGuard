@@ -1,0 +1,1331 @@
+{
+  "nodes": [
+    {
+      "label": [
+        "CRL",
+        "CRLlist"
+      ],
+      "name": "CertificateList",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "CRLlist"
+      ],
+      "name": "tbsCertList",
+      "attributes": {
+        "description": "待签名证书列表",
+        "path_address": "CertificateList.tbsCertList"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "TBSCertList"
+      ],
+      "name": "version",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.version"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "TBSCertList"
+      ],
+      "name": "signature",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.signature"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "TBSCertList"
+      ],
+      "name": "issuer",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.issuer"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "TBSCertList"
+      ],
+      "name": "thisUpdate",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.thisUpdate"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "TBSCertList"
+      ],
+      "name": "nextUpdate",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.nextUpdate"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "TBSCertList"
+      ],
+      "name": "revokedCertificates",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.revokedCertificates"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "TBSCertList"
+      ],
+      "name": "crlExtensions",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.crlExtensions"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "revokedCertificates"
+      ],
+      "name": "userCertificate",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.revokedCertificates.userCertificate"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "revokedCertificates"
+      ],
+      "name": "revocationDate",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.revokedCertificates.revocationDate"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "crlEntryExtensions"
+      ],
+      "name": "revocationDate",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.revokedCertificates.crlEntryExtensions.revocationDate"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "distinguished_name"
+      ],
+      "name": "Name",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.issuer.Name"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "distinguished_name"
+      ],
+      "name": "RelativeDistinguishedName",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.issuer.Name.RelativeDistinguishedName"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "distinguished_name"
+      ],
+      "name": "AttributeTypeAndValue",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.issuer.Name.RelativeDistinguishedName.AttributeTypeAndValue"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "distinguished_name"
+      ],
+      "name": "AttributeType",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.issuer.Name.RelativeDistinguishedName.AttributeTypeAndValue.AttributeType"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "distinguished_name"
+      ],
+      "name": "AttributeValue",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.issuer.Name.RelativeDistinguishedName.AttributeTypeAndValue.AttributeValue"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "distinguished_name"
+      ],
+      "name": "DirectoryString",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.issuer.Name.RelativeDistinguishedName.AttributeTypeAndValue.AttributeType.DirectoryString"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "DirectoryString_Value"
+      ],
+      "name": "teletexString",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.issuer.Name.RelativeDistinguishedName.AttributeTypeAndValue.AttributeType.DirectoryString.teletexString"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "DirectoryString_Value"
+      ],
+      "name": "printableString",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.issuer.Name.RelativeDistinguishedName.AttributeTypeAndValue.AttributeType.DirectoryString.printableString"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "DirectoryString_Value"
+      ],
+      "name": "universalString",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.issuer.Name.RelativeDistinguishedName.AttributeTypeAndValue.AttributeType.DirectoryString.universalString"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "DirectoryString_Value"
+      ],
+      "name": "utf8String",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.issuer.Name.RelativeDistinguishedName.AttributeTypeAndValue.AttributeType.DirectoryString.utf8String"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "DirectoryString_Value"
+      ],
+      "name": "bmpString",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.issuer.Name.RelativeDistinguishedName.AttributeTypeAndValue.AttributeType.DirectoryString.bmpString"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "time"
+      ],
+      "name": "UTCTime",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.thisUpdate.UTCTime"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "time"
+      ],
+      "name": "GeneralizedTime",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.thisUpdate.GeneralizedTime"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "crlExtensions"
+      ],
+      "name": "AuthorityKeyIdentifier",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.crlExtensions.AuthorityKeyIdentifier"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "crlExtensions"
+      ],
+      "name": "IssuerAlternativeName",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.crlExtensions.IssuerAlternativeName"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "GeneralName"
+      ],
+      "name": "GeneralNames",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.GeneralNames",
+        "description": "被强类型标注的身份值”"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "GeneralName"
+      ],
+      "name": "otherName",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.GeneralNames.otherName",
+        "description": ""
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "GeneralName"
+      ],
+      "name": "rfc822Name",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.GeneralNames.rfc822Name",
+        "description": ""
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "GeneralName"
+      ],
+      "name": "dNSName",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.GeneralNames.dNSName",
+        "description": ""
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "GeneralName"
+      ],
+      "name": "x400Address",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.GeneralNames.x400Address",
+        "description": ""
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "GeneralName"
+      ],
+      "name": "directoryName",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.GeneralNames.directoryName",
+        "description": ""
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "GeneralName"
+      ],
+      "name": "ediPartyName",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.GeneralNames.ediPartyName",
+        "description": ""
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "GeneralName"
+      ],
+      "name": "uniformResourceIdentifier",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.GeneralNames.uniformResourceIdentifier",
+        "description": ""
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "GeneralName"
+      ],
+      "name": "iPAddress",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.GeneralNames.iPAddress",
+        "description": ""
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "GeneralName"
+      ],
+      "name": "registeredID",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.GeneralNames.registeredID",
+        "description": ""
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "otherName"
+      ],
+      "name": "type-id",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.GeneralNames.otherName.type-id",
+        "description": ""
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "otherName"
+      ],
+      "name": "value",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.GeneralNames.otherName.value",
+        "description": ""
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "ediPartyName"
+      ],
+      "name": "nameAssigner",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.GeneralNames.ediPartyName.nameAssigner",
+        "description": ""
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "ediPartyName"
+      ],
+      "name": "partyName",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.GeneralNames.ediPartyName.partyName",
+        "description": ""
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "crlExtensions"
+      ],
+      "name": "CRLNumber",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.crlExtensions.CRLNumber"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "crlExtensions"
+      ],
+      "name": "DeltaCRLIndicator",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.crlExtensions.DeltaCRLIndicator"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "DeltaCRLIndicator"
+      ],
+      "name": "BaseCRLNumber",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.crlExtensions.DeltaCRLIndicator.BaseCRLNumber"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "crlExtensions"
+      ],
+      "name": "IssuingDistributionPoint",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.crlExtensions.IssuingDistributionPoint"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "IssuingDistributionPoint"
+      ],
+      "name": "distributionPoint",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.crlExtensions.IssuingDistributionPoint.distributionPoint"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "IssuingDistributionPoint"
+      ],
+      "name": "onlyContainsUserCerts",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.crlExtensions.IssuingDistributionPoint.onlyContainsUserCerts"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "IssuingDistributionPoint"
+      ],
+      "name": "onlyContainsCACerts",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.crlExtensions.IssuingDistributionPoint.onlyContainsCACerts"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "IssuingDistributionPoint"
+      ],
+      "name": "onlySomeReasons",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.crlExtensions.IssuingDistributionPoint.onlySomeReasons"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "IssuingDistributionPoint"
+      ],
+      "name": "indirectCRL",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.crlExtensions.IssuingDistributionPoint.indirectCRL"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "IssuingDistributionPoint"
+      ],
+      "name": "onlyContainsAttributeCerts",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.crlExtensions.IssuingDistributionPoint.onlyContainsAttributeCerts"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "CRLDistributionPoints"
+      ],
+      "name": "distributionPoint",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.FreshestCRL.CRLDistributionPoints.distributionPoint"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "CRLDistributionPoints"
+      ],
+      "name": "fullName",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.FreshestCRL.CRLDistributionPoints.distributionPoint.fullName"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "CRLDistributionPoints"
+      ],
+      "name": "nameRelativeToCRLIssuer",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.FreshestCRL.CRLDistributionPoints.distributionPoint.nameRelativeToCRLIssuer"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "CRLDistributionPoints"
+      ],
+      "name": "reasons",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.FreshestCRL.CRLDistributionPoints.distributionPoint.reasons"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "CRLDistributionPoints"
+      ],
+      "name": "unused",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.FreshestCRL.CRLDistributionPoints.distributionPoint.reasons.unused"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "CRLDistributionPoints"
+      ],
+      "name": "keyCompromise",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.FreshestCRL.CRLDistributionPoints.distributionPoint.reasons.keyCompromise"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "CRLDistributionPoints"
+      ],
+      "name": "cACompromise",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.FreshestCRL.CRLDistributionPoints.distributionPoint.reasons.cACompromise"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "CRLDistributionPoints"
+      ],
+      "name": "affiliationChanged",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.FreshestCRL.CRLDistributionPoints.distributionPoint.reasons.affiliationChanged"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "CRLDistributionPoints"
+      ],
+      "name": "superseded",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.FreshestCRL.CRLDistributionPoints.distributionPoint.reasons.superseded"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "CRLDistributionPoints"
+      ],
+      "name": "cessationOfOperation",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.FreshestCRL.CRLDistributionPoints.distributionPoint.reasons.cessationOfOperation"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "CRLDistributionPoints"
+      ],
+      "name": "certificateHold",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.FreshestCRL.CRLDistributionPoints.distributionPoint.reasons.certificateHold"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "CRLDistributionPoints"
+      ],
+      "name": "privilegeWithdrawn",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.FreshestCRL.CRLDistributionPoints.distributionPoint.reasons.privilegeWithdrawn"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "CRLDistributionPoints"
+      ],
+      "name": "aACompromise",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.FreshestCRL.CRLDistributionPoints.distributionPoint.reasons.aACompromise"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "CRLDistributionPoints"
+      ],
+      "name": "cRLIssuer",
+      "attributes": {
+        "path_address": "CertificateList.tbsCertList.crlExtensions.FreshestCRL.CRLDistributionPoints.distributionPoint.cRLIssuer"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "crlExtensions"
+      ],
+      "name": "FreshestCRL",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.crlExtensions.FreshestCRL"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "FreshestCRL"
+      ],
+      "name": "CRLDistributionPoints",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.crlExtensions.FreshestCRL.CRLDistributionPoints"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "crlExtensions"
+      ],
+      "name": "AuthorityInformationAccess",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.crlExtensions.AuthorityInformationAccess"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "CRLEntryExtensions"
+      ],
+      "name": "CRLEntryExtensions",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.revokedCertificates.crlEntryExtensions"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "CRLEntryExtensions"
+      ],
+      "name": "ReasonCode",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.revokedCertificates.crlEntryExtensions.ReasonCode"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "ReasonCode"
+      ],
+      "name": "unspecified",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.revokedCertificates.crlEntryExtensions.ReasonCode.unspecified"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "ReasonCode"
+      ],
+      "name": "keyCompromise",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.revokedCertificates.crlEntryExtensions.ReasonCode.keyCompromise"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "ReasonCode"
+      ],
+      "name": "cACompromise",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.revokedCertificates.crlEntryExtensions.ReasonCode.cACompromise"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "ReasonCode"
+      ],
+      "name": "affiliationChanged",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.revokedCertificates.crlEntryExtensions.ReasonCode.affiliationChanged"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "ReasonCode"
+      ],
+      "name": "superseded",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.revokedCertificates.crlEntryExtensions.ReasonCode.superseded"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "ReasonCode"
+      ],
+      "name": "cessationOfOperation",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.revokedCertificates.crlEntryExtensions.ReasonCode.cessationOfOperation"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "ReasonCode"
+      ],
+      "name": "certificateHold",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.revokedCertificates.crlEntryExtensions.ReasonCode.certificateHold"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "ReasonCode"
+      ],
+      "name": "removeFromCRL",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.revokedCertificates.crlEntryExtensions.ReasonCode.removeFromCRL"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "ReasonCode"
+      ],
+      "name": "privilegeWithdrawn",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.revokedCertificates.crlEntryExtensions.ReasonCode.privilegeWithdrawn"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "ReasonCode"
+      ],
+      "name": "aACompromise",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.revokedCertificates.crlEntryExtensions.ReasonCode.aACompromise"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "CRLEntryExtensions"
+      ],
+      "name": "InvalidityDate",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.revokedCertificates.crlEntryExtensions.InvalidityDate"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "CRLEntryExtensions"
+      ],
+      "name": "CertificateIssuer",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.tbsCertList.revokedCertificates.crlEntryExtensions.CertificateIssuer"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "CRLlist"
+      ],
+      "name": "signatureAlgorithm",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.signatureAlgorithm"
+      }
+    },
+    {
+      "label": [
+        "CRL",
+        "CRLlist"
+      ],
+      "name": "signatureValue",
+      "attributes": {
+        "description": "",
+        "path_address": "CertificateList.signatureValue"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "start": "CertificateList",
+      "end": "tbsCertList",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "CertificateList",
+      "end": "signatureAlgorithm",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "CertificateList",
+      "end": "signatureValue",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "tbsCertList",
+      "end": "version",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "tbsCertList",
+      "end": "signature",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "tbsCertList",
+      "end": "issuer",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "tbsCertList",
+      "end": "thisUpdate",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "tbsCertList",
+      "end": "nextUpdate",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "tbsCertList",
+      "end": "revokedCertificates",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "tbsCertList",
+      "end": "crlExtensions",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "revokedCertificates",
+      "end": "userCertificate",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "revokedCertificates",
+      "end": "revocationDate",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "revokedCertificates",
+      "end": "crlEntryExtensions",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "issuer",
+      "end": "Name",
+      "type": "HAS_ABS_FIELD"
+    },
+    {
+      "start": "Name",
+      "end": "RelativeDistinguishedName",
+      "type": "HAS_TYPE"
+    },
+    {
+      "start": "Name",
+      "end": "AttributeTypeAndValue",
+      "type": "HAS_ABS_FIELD"
+    },
+    {
+      "start": "AttributeTypeAndValue",
+      "end": "AttributeType",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "AttributeTypeAndValue",
+      "end": "AttributeValue",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "AttributeTypeAndValue",
+      "end": "DirectoryString",
+      "type": "HAS_TYPE"
+    },
+    {
+      "start": "DirectoryString",
+      "end": "teletexString",
+      "type": "HAS_VALUE"
+    },
+    {
+      "start": "DirectoryString",
+      "end": "printableString",
+      "type": "HAS_VALUE"
+    },
+    {
+      "start": "DirectoryString",
+      "end": "universalString",
+      "type": "HAS_VALUE"
+    },
+    {
+      "start": "DirectoryString",
+      "end": "utf8String",
+      "type": "HAS_VALUE"
+    },
+    {
+      "start": "DirectoryString",
+      "end": "bmpString",
+      "type": "HAS_VALUE"
+    },
+    {
+      "start": "thisUpdate",
+      "end": "UTCTime",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "nextUpdate",
+      "end": "UTCTime",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "thisUpdate",
+      "end": "GeneralizedTime",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "nextUpdate",
+      "end": "GeneralizedTime",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "crlExtensions",
+      "end": "AuthorityKeyIdentifier",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "crlExtensions",
+      "end": "IssuerAlternativeName",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "IssuerAlternativeName",
+      "end": "GeneralNames",
+      "type": "HAS_ABS_FIELD"
+    },
+    {
+      "start": "GeneralNames",
+      "end": "otherName",
+      "type": "HAS_TYPE"
+    },
+    {
+      "start": "GeneralNames",
+      "end": "rfc822Name",
+      "type": "HAS_TYPE"
+    },
+    {
+      "start": "GeneralNames",
+      "end": "dNSName",
+      "type": "HAS_TYPE"
+    },
+    {
+      "start": "GeneralNames",
+      "end": "x400Address",
+      "type": "HAS_TYPE"
+    },
+    {
+      "start": "GeneralNames",
+      "end": "directoryName",
+      "type": "HAS_TYPE"
+    },
+    {
+      "start": "GeneralNames",
+      "end": "ediPartyName",
+      "type": "HAS_TYPE"
+    },
+    {
+      "start": "GeneralNames",
+      "end": "uniformResourceIdentifier",
+      "type": "HAS_TYPE"
+    },
+    {
+      "start": "GeneralNames",
+      "end": "iPAddress",
+      "type": "HAS_TYPE"
+    },
+    {
+      "start": "GeneralNames",
+      "end": "registeredID",
+      "type": "HAS_TYPE"
+    },
+    {
+      "start": "otherName",
+      "end": "type-id",
+      "type": "HAS_VALUE"
+    },
+    {
+      "start": "otherName",
+      "end": "value",
+      "type": "HAS_VALUE"
+    },
+    {
+      "start": "ediPartyName",
+      "end": "nameAssigner",
+      "type": "HAS_VALUE"
+    },
+    {
+      "start": "ediPartyName",
+      "end": "partyName",
+      "type": "HAS_VALUE"
+    },
+    {
+      "start": "crlExtensions",
+      "end": "CRLNumber",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "crlExtensions",
+      "end": "DeltaCRLIndicator",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "DeltaCRLIndicator",
+      "end": "BaseCRLNumber",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "crlExtensions",
+      "end": "IssuingDistributionPoint",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "IssuingDistributionPoint",
+      "end": "distributionPoint",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "IssuingDistributionPoint",
+      "end": "onlyContainsUserCerts",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "IssuingDistributionPoint",
+      "end": "onlyContainsCACerts",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "IssuingDistributionPoint",
+      "end": "onlySomeReasons",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "IssuingDistributionPoint",
+      "end": "indirectCRL",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "IssuingDistributionPoint",
+      "end": "onlyContainsAttributeCerts",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "distributionPoint",
+      "end": "fullName",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "distributionPoint",
+      "end": "nameRelativeToCRLIssuer",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "distributionPoint",
+      "end": "reasons",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "reasons",
+      "end": "unused",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "reasons",
+      "end": "keyCompromise",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "reasons",
+      "end": "cACompromise",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "reasons",
+      "end": "affiliationChanged",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "reasons",
+      "end": "superseded",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "reasons",
+      "end": "cessationOfOperation",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "reasons",
+      "end": "certificateHold",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "reasons",
+      "end": "privilegeWithdrawn",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "reasons",
+      "end": "aACompromise",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "distributionPoint",
+      "end": "cRLIssuer",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "crlExtensions",
+      "end": "FreshestCRL",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "crlExtensions",
+      "end": "CRLDistributionPoints",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "crlExtensions",
+      "end": "AuthorityInformationAccess",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "crlExtensions",
+      "end": "CRLEntryExtensions",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "CRLEntryExtensions",
+      "end": "ReasonCode",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "ReasonCode",
+      "end": "unspecified",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "ReasonCode",
+      "end": "keyCompromise",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "ReasonCode",
+      "end": "cACompromise",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "ReasonCode",
+      "end": "affiliationChanged",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "ReasonCode",
+      "end": "cessationOfOperation",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "ReasonCode",
+      "end": "certificateHold",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "ReasonCode",
+      "end": "removeFromCRL",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "ReasonCode",
+      "end": "privilegeWithdrawn",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "ReasonCode",
+      "end": "aACompromise",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "CRLEntryExtensions",
+      "end": "InvalidityDate",
+      "type": "HAS_FIELD"
+    },
+    {
+      "start": "CRLEntryExtensions",
+      "end": "CertificateIssuer",
+      "type": "HAS_FIELD"
+    }
+  ]
+}
