@@ -15,7 +15,7 @@ from openai import OpenAI
 # DEFAULT_LLM_TEMPERATURE = 0.0
 
 DEFAULT_LLM_BASE_URL = "https://api.siliconflow.cn/v1"
-DEFAULT_LLM_API_KEY = "sk-vcbgcrxpzuffndhwvopcwjmamizfxknqygmfajeoqxraidcw"
+DEFAULT_LLM_API_KEY = "sk-mykey"
 DEFAULT_LLM_MODEL = "deepseek-ai/DeepSeek-R1-0528-Qwen3-8B"
 DEFAULT_LLM_TIMEOUT = 120.0
 DEFAULT_LLM_TEMPERATURE = 0.0
